@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="800.0" prefHeight="600.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            fx:id="rootPane" fx:controller="window.WindowController" styleClass="rootPane" focusTraversable="false">
+   <children>
+       <Canvas fx:id="mainCanvas" width="${rootPane.width}" height="${rootPane.height}"
+               AnchorPane.topAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0"/>
+   </children>
+</AnchorPane>
