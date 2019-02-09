@@ -60,17 +60,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MonstersGenerator.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/gameEntities/MonstersGenerator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="GameHandler.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/gameEngine/GameHandler.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="227">
@@ -78,6 +68,42 @@
                   <folding>
                     <element signature="e#2101#2102#0" expanded="true" />
                     <element signature="e#2143#2144#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MonstersGenerator.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/gameEntities/MonstersGenerator.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="EntityAttributes.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/gameEntities/EntityAttributes.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="156" column="38" lean-forward="false" selection-start-line="156" selection-start-column="38" selection-end-line="156" selection-end-column="38" />
+                  <folding>
+                    <element signature="method#EntityAttributes#1;class#EntityAttributes#0" expanded="false" />
+                    <element signature="e#5794#5795#0" expanded="true" />
+                    <element signature="e#5823#5824#0" expanded="true" />
+                    <element signature="e#5863#5864#0" expanded="true" />
+                    <element signature="e#5899#5900#0" expanded="true" />
+                    <element signature="e#5932#5933#0" expanded="true" />
+                    <element signature="e#5965#5966#0" expanded="true" />
+                    <element signature="e#6007#6008#0" expanded="true" />
+                    <element signature="e#6051#6052#0" expanded="true" />
+                    <element signature="e#6085#6086#0" expanded="true" />
+                    <element signature="e#6116#6117#0" expanded="true" />
+                    <element signature="method#setLevel#0;class#EntityAttributes#0" expanded="false" />
+                    <element signature="method#setExperienceFromKilling#0;class#EntityAttributes#0" expanded="false" />
+                    <element signature="method#setPhysicalDefenceOnLvlUp#0;class#EntityAttributes#0" expanded="false" />
+                    <element signature="method#decodeGraphics#0;class#EntityAttributes#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -107,17 +133,17 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/user/User.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="228">
-                  <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+                <state relative-caret-position="748">
+                  <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user.xml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="user.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/res/templates/user.xml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
@@ -210,17 +236,17 @@
         <option value="$PROJECT_DIR$/src/gameEngine/EntitiesManager.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/gameEntities/MortalEntity.java" />
-        <option value="$PROJECT_DIR$/src/gameEntities/MonstersGenerator.java" />
         <option value="$PROJECT_DIR$/src/gameEngine/GameHandler.java" />
         <option value="$PROJECT_DIR$/src/gameEntities/Monster.java" />
         <option value="$PROJECT_DIR$/src/gameEngine/GameParams.java" />
         <option value="$PROJECT_DIR$/src/window/WindowController.java" />
-        <option value="$PROJECT_DIR$/src/gameEntities/EntityAttributes.java" />
         <option value="$PROJECT_DIR$/src/utilities/XMLManager.java" />
-        <option value="$PROJECT_DIR$/src/user/User.java" />
         <option value="$PROJECT_DIR$/res/entitiesDefinitions/user.xml" />
         <option value="$PROJECT_DIR$/src/gameEntities/Character.java" />
         <option value="$PROJECT_DIR$/res/templates/user.xml" />
+        <option value="$PROJECT_DIR$/src/user/User.java" />
+        <option value="$PROJECT_DIR$/src/gameEntities/MonstersGenerator.java" />
+        <option value="$PROJECT_DIR$/src/gameEntities/EntityAttributes.java" />
       </list>
     </option>
   </component>
@@ -233,7 +259,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="1280" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -547,16 +573,15 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1549722532026" duration="224000" />
-      <workItem from="1549723632180" duration="10565000" />
+      <workItem from="1549723632180" duration="11814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12091000" />
+    <option name="totallyTimeSpent" value="13340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -566,7 +591,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -853,28 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameEntities/EntityAttributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="290" column="5" lean-forward="false" selection-start-line="290" selection-start-column="5" selection-end-line="290" selection-end-column="5" />
-          <folding>
-            <element signature="method#EntityAttributes#1;class#EntityAttributes#0" expanded="false" />
-            <element signature="method#setLevel#0;class#EntityAttributes#0" expanded="false" />
-            <element signature="method#setExperienceFromKilling#0;class#EntityAttributes#0" expanded="false" />
-            <element signature="method#setPhysicalDefenceOnLvlUp#0;class#EntityAttributes#0" expanded="false" />
-            <element signature="method#decodeGraphics#0;class#EntityAttributes#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameEntities/MonstersGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utilities/XMLManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -964,18 +967,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/templates/user.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameEntities/EntityAttributes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="156" column="38" lean-forward="false" selection-start-line="156" selection-start-column="38" selection-end-line="156" selection-end-column="38" />
+          <folding>
+            <element signature="method#EntityAttributes#1;class#EntityAttributes#0" expanded="false" />
+            <element signature="e#5794#5795#0" expanded="true" />
+            <element signature="e#5823#5824#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
+            <element signature="e#5899#5900#0" expanded="true" />
+            <element signature="e#5932#5933#0" expanded="true" />
+            <element signature="e#5965#5966#0" expanded="true" />
+            <element signature="e#6007#6008#0" expanded="true" />
+            <element signature="e#6051#6052#0" expanded="true" />
+            <element signature="e#6085#6086#0" expanded="true" />
+            <element signature="e#6116#6117#0" expanded="true" />
+            <element signature="method#setLevel#0;class#EntityAttributes#0" expanded="false" />
+            <element signature="method#setExperienceFromKilling#0;class#EntityAttributes#0" expanded="false" />
+            <element signature="method#setPhysicalDefenceOnLvlUp#0;class#EntityAttributes#0" expanded="false" />
+            <element signature="method#decodeGraphics#0;class#EntityAttributes#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameEntities/MonstersGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
           <folding />
         </state>
       </provider>

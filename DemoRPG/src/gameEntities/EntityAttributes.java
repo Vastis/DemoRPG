@@ -128,6 +128,36 @@ public class EntityAttributes {
         System.out.println("Advanced to level " + this.level);
     }
 
+    public EntityAttributes clone(){
+        EntityAttributes cloned = new EntityAttributes(this.entity, this.gameHandler);
+        cloned.setInitTileX(this.initTileX);
+        cloned.setInitTileY(this.initTileY);
+        cloned.setHealth(this.health);
+        cloned.setSoulPoints(this.soulPoints);
+        cloned.setSpeed(this.speed);
+        cloned.setStrength(this.strength);
+        cloned.setAgility(this.agility);
+        cloned.setIntelligence(this.intelligence);
+        cloned.setPhysicalDefence(this.physicalDefence);
+        cloned.setMagicDefence(this.magicDefence);
+        cloned.setLuck(this.luck);
+        cloned.setLineOfSight(this.lineOfSight);
+        cloned.setTotalExperience(this.totalExperience);
+        cloned.setExperienceFromKilling(this.experienceFromKilling);
+        cloned.setLevel(this.level);
+        cloned.setName(this.name);
+        cloned.setType(this.type);
+        cloned.setGraphics(this.graphics);
+        cloned.setHealthOnLvlUp(healthOnLvlUp);
+        cloned.setSoulPointsOnLvlUp(soulPointsOnLvlUp);
+        cloned.setStrengthOnLvlUp(strengthOnLvlUp);
+        cloned.setAgilityOnLvlUp(agilityOnLvlUp);
+        cloned.setIntelligenceOnLvlUp(intelligenceOnLvlUp);
+        cloned.setPhysicalDefenceOnLvlUp(physicalDefenceOnLvlUp);
+        cloned.setMagicDefenceOnLvlUp(magicDefenceOnLvlUp);
+        return cloned;
+    }
+
     public int getHealth() {
         return health;
     }
@@ -263,6 +293,9 @@ public class EntityAttributes {
     }
     public Color getGraphics() {
         return graphics;
+    }
+    public void setGraphics(Color graphics) {
+        this.graphics = graphics;
     }
     public void setGraphics(String graphicsString) {
         this.graphics = decodeGraphics(graphicsString);

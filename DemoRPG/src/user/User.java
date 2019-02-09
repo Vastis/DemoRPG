@@ -22,7 +22,6 @@ public class User implements GraphicsInterface {
         this.gameHandler = gameHandler;
         this.character = initCharacter(userDefinition);
         setListeners();
-        log();
     }
 
     private Character initCharacter(EntityAttributes userDefinition) {
@@ -46,26 +45,12 @@ public class User implements GraphicsInterface {
         return null;
     }
 
-    //tmp
-    private void log() {
-        System.err.println("From User**: ");
-        System.err.println("\t 3. Entities data imported from XML files.");
-        System.err.println("\t 4. Showing damage dealt on screen.");
-        System.err.println("\t 5. NPCs - talking and shit.");
-        System.err.println("\t 6. Equipment, loot.");
-        System.err.println("\t 7. Trading.");
-        System.err.println("\t 8. Resistances, balancing attributes calculations.");
-        System.err.println("I'd do 5,6,7 at popups, equipment at right panel");
-    }
-
     private void setListeners(){
         UserMouseListener mouseListener = new UserMouseListener(this.gameHandler, this.character);
         this.gameHandler.getCanvas().setOnKeyPressed(e -> this.keyCode = e.getCode());
         this.gameHandler.getCanvas().setOnKeyReleased(e -> this.keyCode = null);
         this.gameHandler.getCanvas().setOnMouseClicked(e -> mouseListener.onMouseClicked(e));
     }
-
-
 
     @Override
     public void update(){

@@ -26,7 +26,7 @@ public class MonstersGenerator {
                 for(int col = 0; col < monstersMatrix[row].length; col++){
                     if(monstersMatrix[row][col] != 0)
                         entities[row][col] =
-                                new Monster(this.gameHandler, monstersDefinitions[monstersMatrix[row][col]], row, col);
+                                new Monster(this.gameHandler, monstersDefinitions[monstersMatrix[row][col]].clone(), row, col);
                 }
             }
         } catch (IOException e) {
