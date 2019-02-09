@@ -5,13 +5,16 @@ import gameEngine.GameParams;
 import utilities.FileManager;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MonstersGenerator {
 
     private GameHandler gameHandler;
+    private EntityAttributes[] monstersDefinitions;
 
     public MonstersGenerator(GameHandler gameHandler){
         this.gameHandler = gameHandler;
+        this.monstersDefinitions = this.gameHandler.getMonstersDefinitions();
     }
 
     public Entity[][] generate(){
@@ -22,7 +25,8 @@ public class MonstersGenerator {
             for(int row = 0; row < monstersMatrix.length; row++){
                 for(int col = 0; col < monstersMatrix[row].length; col++){
                     if(monstersMatrix[row][col] != 0)
-                        entities[row][col] = new Monster(this.gameHandler, row, col, 1.0);
+                        entities[row][col] =
+                                new Monster(this.gameHandler, monstersDefinitions[monstersMatrix[row][col]], row, col);
                 }
             }
         } catch (IOException e) {

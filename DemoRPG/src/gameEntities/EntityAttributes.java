@@ -1,6 +1,7 @@
 package gameEntities;
 
 import gameEngine.GameHandler;
+import javafx.scene.paint.Color;
 import utilities.PseudoRandomGenerator;
 
 public class EntityAttributes {
@@ -14,6 +15,8 @@ public class EntityAttributes {
     private GameHandler gameHandler;
 
     private PseudoRandomGenerator generator;
+
+    private String name, type;
     //to be changed later
     private int
             health,
@@ -27,15 +30,29 @@ public class EntityAttributes {
             agility,
             intelligence,
             luck,
+            speed,
             physicalDefence,
             magicDefence;
 
-    public EntityAttributes(MortalEntity entity, GameHandler gameHandler){
-        this.entity = entity;
-        this.gameHandler = gameHandler;
+    private int
+            healthOnLvlUp,
+            soulPointsOnLvlUp,
+            strengthOnLvlUp,
+            agilityOnLvlUp,
+            intelligenceOnLvlUp,
+            physicalDefenceOnLvlUp,
+            magicDefenceOnLvlUp;
+
+    private Color graphics;
+
+    private int initTileX, initTileY;
+
+    public EntityAttributes(){
         this.generator = new PseudoRandomGenerator();
+        //default params - if not set by XMLManager.
         this.health = 30;
         this.soulPoints = 10;
+        this.speed = 0.0;
         this.strength = 10;
         this.agility = 10;
         this.intelligence = 30;
@@ -47,6 +64,21 @@ public class EntityAttributes {
         this.experienceFromKilling = 10;
         this.level = 1;
         this.expForNextLvl = this.level * this.level * expStep;
+        this.name = "";
+        this.type = "Melee";
+        this.graphics = Color.YELLOW;
+    }
+    public EntityAttributes(MortalEntity entity, GameHandler gameHandler){
+        this();
+        this.entity = entity;
+        this.gameHandler = gameHandler;
+    }
+
+    public void setEntity(MortalEntity entity){
+        this.entity = entity;
+    }
+    public void setGameHandler(GameHandler gameHandler){
+        this.gameHandler = gameHandler;
     }
 
     public void physicalDamageDealt(HostileEntity attacker){
@@ -152,5 +184,118 @@ public class EntityAttributes {
     }
     public int getExperienceFromKilling() {
         return experienceFromKilling;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public double getSpeed() {
+        return speed;
+    }
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+    public int getLevel() {
+        return level;
+    }
+    public void setLevel(int level) {
+        this.level = level;
+        this.expForNextLvl = this.level * this.level * expStep;
+    }
+    public String getType() {
+        return type;
+    }
+    public void setType(String type) {
+        this.type = type;
+    }
+    public void setExperienceFromKilling(int experienceFromKilling) {
+        this.experienceFromKilling = experienceFromKilling;
+    }
+    public void setLineOfSight(int lineOfSight) {
+        this.lineOfSight = lineOfSight;
+    }
+    public void setTotalExperience(int totalExperience) {
+        this.totalExperience = totalExperience;
+    }
+    public void setHealthOnLvlUp(int healthOnLvlUp) {
+        this.healthOnLvlUp = healthOnLvlUp;
+    }
+    public int getAgilityOnLvlUp() {
+        return agilityOnLvlUp;
+    }
+    public int getHealthOnLvlUp() {
+        return healthOnLvlUp;
+    }
+    public int getIntelligenceOnLvlUp() {
+        return intelligenceOnLvlUp;
+    }
+    public int getMagicDefenceOnLvlUp() {
+        return magicDefenceOnLvlUp;
+    }
+    public int getPhysicalDefenceOnLvlUp() {
+        return physicalDefenceOnLvlUp;
+    }
+    public int getSoulPointsOnLvlUp() {
+        return soulPointsOnLvlUp;
+    }
+    public int getStrengthOnLvlUp() {
+        return strengthOnLvlUp;
+    }
+    public void setAgilityOnLvlUp(int agilityOnLvlUp) {
+        this.agilityOnLvlUp = agilityOnLvlUp;
+    }
+    public void setIntelligenceOnLvlUp(int intelligenceOnLvlUp) {
+        this.intelligenceOnLvlUp = intelligenceOnLvlUp;
+    }
+    public void setMagicDefenceOnLvlUp(int magicDefenceOnLvlUp) {
+        this.magicDefenceOnLvlUp = magicDefenceOnLvlUp;
+    }
+    public void setPhysicalDefenceOnLvlUp(int physicalDefenceOnLvlUp) {
+        this.physicalDefenceOnLvlUp = physicalDefenceOnLvlUp;
+    }
+    public void setSoulPointsOnLvlUp(int soulPointsOnLvlUp) {
+        this.soulPointsOnLvlUp = soulPointsOnLvlUp;
+    }
+    public void setStrengthOnLvlUp(int strengthOnLvlUp) {
+        this.strengthOnLvlUp = strengthOnLvlUp;
+    }
+    public Color getGraphics() {
+        return graphics;
+    }
+    public void setGraphics(String graphicsString) {
+        this.graphics = decodeGraphics(graphicsString);
+    }
+    //tmp
+    private Color decodeGraphics(String graphicsString){
+        switch (graphicsString) {
+            case "PINK":
+                return Color.PINK;
+            case "GREY":
+                return Color.GREY;
+            case "BROWN":
+                return Color.BROWN;
+            case "BLUE":
+                return Color.BLUE;
+            case "DARKGREEN":
+                return Color.DARKGREEN;
+            case "BLACK":
+                return Color.BLACK;
+        }
+        return Color.YELLOW;
+    }
+
+    public int getInitTileX() {
+        return initTileX;
+    }
+    public void setInitTileX(int initTileX) {
+        this.initTileX = initTileX;
+    }
+    public int getInitTileY() {
+        return initTileY;
+    }
+    public void setInitTileY(int initTileY) {
+        this.initTileY = initTileY;
     }
 }

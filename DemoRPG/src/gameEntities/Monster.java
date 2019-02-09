@@ -12,8 +12,8 @@ public class Monster extends HostileEntity {
     private int ticksToNextGeneration;
     private Random random;
 
-    public Monster(GameHandler gameHandler, int tileX, int tileY, double speed) {
-        super(gameHandler, tileX, tileY, speed);
+    public Monster(GameHandler gameHandler, EntityAttributes attributes, int tileX, int tileY) {
+        super(gameHandler, attributes, tileX, tileY);
         this.random = new Random();
         this.ticksToNextGeneration = GameParams.TICKS_PER_SECOND * 2;
     }
@@ -87,7 +87,7 @@ public class Monster extends HostileEntity {
         }
         Color color;
         if(!this.dead)
-            color = Color.DARKRED;
+            color = this.attributes.getGraphics();
         else
             color = Color.BLACK;
         this.gameHandler.getGameRenderer().fillOvalRelativeToPlayer(color,

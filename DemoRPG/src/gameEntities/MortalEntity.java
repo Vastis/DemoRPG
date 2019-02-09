@@ -4,17 +4,14 @@ import gameEngine.GameHandler;
 
 public abstract class MortalEntity extends Entity {
 
-    protected boolean dead;
     protected EntityAttributes attributes;
+    protected boolean dead;
 
-    public MortalEntity(GameHandler gameHandler, int tileX, int tileY, double speed) {
-        super(gameHandler, tileX, tileY, speed);
-        this.attributes = new EntityAttributes(this, gameHandler);
+    public MortalEntity(GameHandler gameHandler, EntityAttributes attributes, int tileX, int tileY) {
+        super(gameHandler, tileX, tileY, attributes.getSpeed());
+        this.attributes = attributes;
+        this.attributes.setEntity(this);
         this.dead = false;
-    }
-
-    public EntityAttributes getAttributes() {
-        return attributes;
     }
 
     @Override
@@ -25,12 +22,10 @@ public abstract class MortalEntity extends Entity {
     }
 
     @Override
-    public void draw(){
-
-    }
-
-    @Override
     public boolean isDead(){
         return this.dead;
+    }
+    public EntityAttributes getAttributes() {
+        return attributes;
     }
 }

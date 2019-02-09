@@ -11,8 +11,8 @@ public abstract class HostileEntity extends MortalEntity {
     protected boolean attacking;
 
 
-    public HostileEntity(GameHandler gameHandler, int tileX, int tileY, double speed) {
-        super(gameHandler, tileX, tileY, speed);
+    public HostileEntity(GameHandler gameHandler, EntityAttributes attributes, int tileX, int tileY) {
+        super(gameHandler, attributes, tileX, tileY);
         this.delay = 0;
         this.attacking = false;
         this.currentDrawTicks = 0;
@@ -46,7 +46,6 @@ public abstract class HostileEntity extends MortalEntity {
             this.attacking = false;
             this.currentDrawTicks = 0;
         }
-        super.draw();
     }
 
     public abstract boolean attack();

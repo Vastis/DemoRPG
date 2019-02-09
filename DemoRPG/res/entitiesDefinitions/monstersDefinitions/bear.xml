@@ -1,0 +1,22 @@
+<root>
+
+    <id>4</id>
+    <name>Bear</name>
+    <type>Melee</type>
+    <experienceFromKilling>40</experienceFromKilling>
+
+    <health>50</health>
+    <soulPoints>0</soulPoints>
+    <lineOfSight>4</lineOfSight>
+    <speed>1.5</speed>
+
+    <strength>40</strength>
+    <agility>20</agility>
+    <intelligence>5</intelligence>
+    <luck>0.2</luck>
+
+    <physicalDefence>25</physicalDefence>
+    <magicDefence>15</magicDefence>
+
+    <graphics>BLACK</graphics>
+</root>

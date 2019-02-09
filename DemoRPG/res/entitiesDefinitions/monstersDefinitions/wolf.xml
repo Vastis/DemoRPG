@@ -1,0 +1,23 @@
+<root>
+
+    <id>3</id>
+    <name>Wolf</name>
+    <type>Melee</type>
+    <experienceFromKilling>20</experienceFromKilling>
+
+    <health>30</health>
+    <soulPoints>0</soulPoints>
+    <lineOfSight>5</lineOfSight>
+    <speed>2.0</speed>
+
+    <strength>20</strength>
+    <agility>10</agility>
+    <intelligence>0</intelligence>
+    <luck>0.1</luck>
+
+    <physicalDefence>10</physicalDefence>
+    <magicDefence>5</magicDefence>
+
+    <graphics>GREY</graphics>
+
+</root>

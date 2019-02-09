@@ -1,0 +1,22 @@
+<root>
+
+    <id>1</id>
+    <name>Worm</name>
+    <type>Melee</type>
+    <experienceFromKilling>2</experienceFromKilling>
+
+    <health>30</health>
+    <soulPoints>0</soulPoints>
+    <lineOfSight>1</lineOfSight>
+    <speed>0.5</speed>
+
+    <strength>1</strength>
+    <agility>0</agility>
+    <intelligence>0</intelligence>
+    <luck>0.1</luck>
+
+    <physicalDefence>1</physicalDefence>
+    <magicDefence>0</magicDefence>
+
+    <graphics>PINK</graphics>
+</root>

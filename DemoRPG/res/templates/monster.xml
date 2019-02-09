@@ -1,0 +1,24 @@
+<root>
+    <semantics>
+        <id>Integer corresponding with monsters.matrix file content.</id>
+        <name></name>
+        <type>Melee/Distance/Magic.</type>
+        <experienceFromKilling>Experience gained when killing the monster.</experienceFromKilling>
+
+        <health>Monster's health.</health>
+        <soulPoints>Used for casting spells or sth.</soulPoints>
+        <lineOfSight>If player is within the monster's line of sight, it starts to chase him.</lineOfSight>
+        <speed>Monster's speed.</speed>
+
+        <strength>Melee-type's attack base.</strength>
+        <agility>Distance-type's attack base.</agility>
+        <intelligence>Magic-type's attack base.</intelligence>
+        <luck>Just a damage dealt/taken differentiating coefficient.</luck>
+
+        <physicalDefence>Def from physical attacks (Melee and Distance types).</physicalDefence>
+        <magicDefence>Def from magic attacks (Magic types).</magicDefence>
+
+        <graphics>Eventually - filePath to graphics file. Temporarily - color.</graphics>
+
+    </semantics>
+</root>

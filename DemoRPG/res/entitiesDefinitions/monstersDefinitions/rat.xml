@@ -1,0 +1,23 @@
+<root>
+
+    <id>2</id>
+    <name>Rat</name>
+    <type>Melee</type>
+    <experienceFromKilling>5</experienceFromKilling>
+
+    <health>20</health>
+    <soulPoints>0</soulPoints>
+    <lineOfSight>5</lineOfSight>
+    <speed>1.0</speed>
+
+    <strength>10</strength>
+    <agility>5</agility>
+    <intelligence>0</intelligence>
+    <luck>0.1</luck>
+
+    <physicalDefence>5</physicalDefence>
+    <magicDefence>2</magicDefence>
+
+    <graphics>BROWN</graphics>
+
+</root>

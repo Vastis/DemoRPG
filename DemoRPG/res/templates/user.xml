@@ -1,0 +1,29 @@
+<root>
+    <semantics>
+        <id>*May be useful later...</id>
+        <name>User's name.</name>
+        <type>"Project path" to vocation the User's chosen
+            (in User class new instance is created from path set here -
+            e.g. for Sorcerer it's "vocations.Sorcerer").</type>
+        <level>User's level.</level>
+        <totalExperience>User's experience.</totalExperience>
+
+        <tileX>Last User's tileX.</tileX>
+        <tileY>Last User's tileY.</tileY>
+
+        <health>User's health.</health>
+        <soulPoints>Used for casting spells or sth.</soulPoints>
+        <lineOfSight>For Archer/Sorcerer - distance from which entities can be attacked.</lineOfSight>
+        <speed>User's speed.</speed>
+
+        <strength>Warrior's attack base.</strength>
+        <agility>Archer's attack base.</agility>
+        <intelligence>Sorcerer's attack base.</intelligence>
+        <luck>Just a damage dealt/taken differentiating coefficient.</luck>
+
+        <physicalDefence>Def from physical attacks (Melee and Distance types).</physicalDefence>
+        <magicDefence>Def from magic attacks (Magic types).</magicDefence>
+
+        <graphics>Eventually - filePath to graphics file. Temporarily - color.</graphics>
+    </semantics>
+</root>
