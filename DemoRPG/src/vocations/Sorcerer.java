@@ -3,15 +3,16 @@ package vocations;
 import gameEngine.GameHandler;
 import gameEngine.GameParams;
 import gameEntities.Character;
+import gameEntities.EntityAttributes;
 import gameEntities.HostileEntity;
 import javafx.scene.paint.Color;
 
-public class Mage extends Character {
+public class Sorcerer extends Character {
 
     private double beginX, beginY, endX, endY;
 
-    public Mage(GameHandler gameHandler, int tileX, int tileY, double speed) {
-        super(gameHandler, tileX, tileY, speed);
+    public Sorcerer(GameHandler gameHandler, EntityAttributes attributes, int tileX, int tileY) {
+        super(gameHandler, attributes, tileX, tileY);
     }
 
     @Override

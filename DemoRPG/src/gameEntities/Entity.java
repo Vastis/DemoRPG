@@ -180,7 +180,6 @@ public abstract class Entity implements GraphicsInterface {
     public void setEntitySelected(Entity entitySelected) {
         this.entitySelected = entitySelected;
     }
-
     public boolean isDead(){
         return false;
     }

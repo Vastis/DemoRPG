@@ -1,0 +1,22 @@
+<root>
+
+    <id>6</id>
+    <name>Monk</name>
+    <type>Magic</type>
+    <experienceFromKilling>80</experienceFromKilling>
+
+    <health>60</health>
+    <soulPoints>0</soulPoints>
+    <lineOfSight>5</lineOfSight>
+    <speed>1.5</speed>
+
+    <strength>10</strength>
+    <agility>10</agility>
+    <intelligence>50</intelligence>
+    <luck>0.1</luck>
+
+    <physicalDefence>30</physicalDefence>
+    <magicDefence>35</magicDefence>
+
+    <graphics>BLUE</graphics>
+</root>

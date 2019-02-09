@@ -1,0 +1,23 @@
+<root>
+
+    <id>5</id>
+    <name>Elf</name>
+    <type>Distance</type>
+    <experienceFromKilling>35</experienceFromKilling>
+
+    <health>30</health>
+    <soulPoints>0</soulPoints>
+    <lineOfSight>5</lineOfSight>
+    <speed>1.5</speed>
+
+    <strength>10</strength>
+    <agility>25</agility>
+    <intelligence>10</intelligence>
+    <luck>0.2</luck>
+
+    <physicalDefence>15</physicalDefence>
+    <magicDefence>15</magicDefence>
+
+    <graphics>DARKGREEN</graphics>
+
+</root>

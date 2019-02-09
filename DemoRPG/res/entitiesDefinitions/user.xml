@@ -1,0 +1,25 @@
+<root>
+    <id>0</id>
+    <name>Vastis</name>
+    <type>vocations.Sorcerer</type>
+    <level>1</level>
+    <totalExperience>0</totalExperience>
+
+    <tileX>100</tileX>
+    <tileY>100</tileY>
+
+    <health>50</health>
+    <soulPoints>20</soulPoints>
+    <lineOfSight>3</lineOfSight>
+    <speed>2.0</speed>
+
+    <strength>10</strength>
+    <agility>10</agility>
+    <intelligence>10</intelligence>
+    <luck>0.25</luck>
+
+    <physicalDefence>5</physicalDefence>
+    <magicDefence>5</magicDefence>
+
+    <graphics>BLUE</graphics>
+</root>

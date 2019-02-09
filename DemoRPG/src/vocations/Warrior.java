@@ -2,13 +2,14 @@ package vocations;
 
 import gameEngine.GameHandler;
 import gameEntities.Character;
+import gameEntities.EntityAttributes;
 import gameEntities.HostileEntity;
 import javafx.scene.paint.Color;
 
 public class Warrior extends Character {
 
-    public Warrior(GameHandler gameHandler, int tileX, int tileY, double speed) {
-        super(gameHandler, tileX, tileY, speed);
+    public Warrior(GameHandler gameHandler, EntityAttributes attributes, int tileX, int tileY) {
+        super(gameHandler, attributes, tileX, tileY);
     }
 
     @Override

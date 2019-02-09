@@ -1,12 +1,14 @@
 package gameEngine;
 
 import gameEntities.Character;
+import gameEntities.EntityAttributes;
 import gameInterfaces.GraphicsInterface;
 import javafx.scene.canvas.Canvas;
 import user.User;
 
 public class GameHandler implements GraphicsInterface {
 
+    private EntityAttributes[] monstersDefinitions;
     private Canvas canvas;
     private GameRenderer gameRenderer;
     private EntitiesManager entitiesManager;
@@ -14,8 +16,11 @@ public class GameHandler implements GraphicsInterface {
     private int rows, cols;
     private User user;
 
-    public GameHandler(Canvas canvas){
+    public GameHandler(Canvas canvas, EntityAttributes[] monstersDefinitions){
         this.canvas = canvas;
+        this.monstersDefinitions = monstersDefinitions;
+        for(int i = 1; i < monstersDefinitions.length; i++)
+            monstersDefinitions[i].setGameHandler(this);
 
         this.worldManager = new WorldManager(this);
         this.entitiesManager = new EntitiesManager(this);
@@ -55,6 +60,9 @@ public class GameHandler implements GraphicsInterface {
     }
     public GameRenderer getGameRenderer() {
         return gameRenderer;
+    }
+    public EntityAttributes[] getMonstersDefinitions() {
+        return monstersDefinitions;
     }
 
     @Override
