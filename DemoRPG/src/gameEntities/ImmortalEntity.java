@@ -1,9 +1,10 @@
 package gameEntities;
 
-import gameEngine.GameHandler;
+import gameCore.GameHandler;
+import gameEntitiesAttributes.ImmortalEntityAttributes;
 
 public abstract class ImmortalEntity extends Entity {
-    public ImmortalEntity(GameHandler gameHandler, int tileX, int tileY, double speed) {
-        super(gameHandler, tileX, tileY, speed);
+    public ImmortalEntity(GameHandler gameHandler, ImmortalEntityAttributes entityAttributes) {
+        super(gameHandler, entityAttributes);
     }
 }

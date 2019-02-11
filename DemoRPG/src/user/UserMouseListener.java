@@ -1,7 +1,7 @@
 package user;
 
-import gameEngine.GameHandler;
-import gameEngine.GameParams;
+import gameCore.GameHandler;
+import gameCore.GameParams;
 import gameEntities.Character;
 import gameEntities.Entity;
 import javafx.scene.input.MouseButton;
@@ -18,16 +18,16 @@ public class UserMouseListener {
     }
 
     private void enqueueMovement(MouseEvent e) {
-        if(!this.character.isMoving()) {
+        if(!this.character.getMovement().isMoving()) {
             int tileX = (int) ((e.getX() + this.gameHandler.getGameRenderer().getRelativePosX()) / GameParams.TILE_SIZE);
             int tileY = (int) ((e.getY() + this.gameHandler.getGameRenderer().getRelativePosY()) / GameParams.TILE_SIZE);
 
-            int deltaX = this.character.getTileX() - tileX;
-            int deltaY = this.character.getTileY() - tileY;
+            int deltaX = this.character.getMovement().getTileX() - tileX;
+            int deltaY = this.character.getMovement().getTileY() - tileY;
             int absDeltaX = Math.abs(deltaX);
             int absDeltaY = Math.abs(deltaY);
 
-            this.character.enqueueMovementPath(deltaX, deltaY, absDeltaX, absDeltaY);
+            this.character.getMovement().enqueueMovementPath(deltaX, deltaY, absDeltaX, absDeltaY);
         }
     }
     private void selectEntity(MouseEvent e){
@@ -35,19 +35,18 @@ public class UserMouseListener {
         int tileY = (int) ((e.getY() + this.gameHandler.getGameRenderer().getRelativePosY()) / GameParams.TILE_SIZE);
 
         if(this.gameHandler.getWorldManager().getTileAt(tileX, tileY).isOccupied()){
-            if(this.character.getEntitySelected() != null) {
-                this.character.getEntitySelected().setSelected(false);
-                Entity newSelectedEntity = this.gameHandler.getWorldManager().getTileAt(tileX, tileY).getEntityOccupying();
-                if(this.character.getEntitySelected().equals(newSelectedEntity))
-                    this.character.setEntitySelected(null);
-                else {
-                    this.character.setEntitySelected(newSelectedEntity);
-                    this.character.getEntitySelected().setSelected(true);
+            Entity newSelectedEntity = this.gameHandler.getWorldManager().getTileAt(tileX, tileY).getEntityOccupying();
+            if(!newSelectedEntity.getMovement().isDead()) {
+                if (this.character.getMovement().getEntitySelected() != null) {
+                    if (this.character.getMovement().getEntitySelected().equals(newSelectedEntity)) {
+                        this.character.getMovement().getEntitySelected().getMovement().setSelected(false);
+                        this.character.getMovement().setEntitySelected(null);
+                        return;
+                    }
                 }
-            } else {
-                this.character.setEntitySelected(this.gameHandler.getWorldManager().getTileAt(tileX, tileY).getEntityOccupying());
-                this.character.getEntitySelected().setSelected(true);
-            }
+                this.character.getMovement().setEntitySelected(newSelectedEntity);
+            } else
+                System.out.println("You clicked at a dead body...");
         }
     }
     public void onMouseClicked(MouseEvent e) {

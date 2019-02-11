@@ -1,13 +1,10 @@
 package user;
 
-import gameEngine.GameHandler;
-import gameEngine.GameParams;
+import gameCore.GameHandler;
 import gameEntities.Character;
-import gameEntities.EntityAttributes;
+import gameEntitiesAttributes.CharacterAttributes;
 import gameInterfaces.GraphicsInterface;
 import javafx.scene.input.KeyCode;
-import vocations.Sorcerer;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -18,19 +15,19 @@ public class User implements GraphicsInterface {
 
     private KeyCode keyCode;
 
-    public User(GameHandler gameHandler, EntityAttributes userDefinition){
+    public User(GameHandler gameHandler, CharacterAttributes userDefinition){
         this.gameHandler = gameHandler;
         this.character = initCharacter(userDefinition);
         setListeners();
     }
 
-    private Character initCharacter(EntityAttributes userDefinition) {
+    private Character initCharacter(CharacterAttributes userDefinition) {
         try {
+            userDefinition.setGameHandler(this.gameHandler);
             Class<?> characterClass = Class.forName(userDefinition.getType());
             Constructor<?> characterConstructor = characterClass
-                    .getConstructor(GameHandler.class, EntityAttributes.class, Integer.TYPE, Integer.TYPE);
-            return (Character)characterConstructor.newInstance(this.gameHandler, userDefinition,
-                    userDefinition.getInitTileX(), userDefinition.getInitTileY());
+                    .getConstructor(GameHandler.class, CharacterAttributes.class);
+            return (Character)characterConstructor.newInstance(this.gameHandler, userDefinition);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -55,7 +52,7 @@ public class User implements GraphicsInterface {
     @Override
     public void update(){
         if(this.keyCode != null)
-            character.replaceMovement(this.keyCode);
+            this.character.getMovement().replaceMovement(this.keyCode);
         this.character.update();
     }
 

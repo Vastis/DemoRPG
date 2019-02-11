@@ -1,7 +1,9 @@
 package utilities;
 
-import gameEngine.GameParams;
-import gameEntities.EntityAttributes;
+import gameCore.GameParams;
+import gameEntitiesAttributes.CharacterAttributes;
+import gameEntitiesAttributes.EntityAttributes;
+import gameEntitiesAttributes.MonsterAttributes;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
@@ -39,8 +41,8 @@ public class XMLManager {
         return document.getElementsByTagName(tagName).item(0).getChildNodes().item(0).getNodeValue().trim();
     }
 
-    private static void decodeMonster(Document document, EntityAttributes[] monstersDefinitions){
-        EntityAttributes monsterDefinition = new EntityAttributes();
+    private static void decodeMonster(Document document, MonsterAttributes[] monstersDefinitions){
+        MonsterAttributes monsterDefinition = new MonsterAttributes();
         int monsterId = Integer.parseInt(getNodeValueByTagName(document, "id"));
 
         monsterDefinition.setName(getNodeValueByTagName(document, "name"));
@@ -82,11 +84,11 @@ public class XMLManager {
 
         monstersDefinitions[monsterId] = monsterDefinition;
     }
-    public static EntityAttributes[] loadMonsters(){
-        EntityAttributes[] monstersDefinitions = null;
+    public static MonsterAttributes[] loadMonsters(){
+        MonsterAttributes[] monstersDefinitions = null;
         try {
             ArrayList<Document> files = getXMLFilesInDir(GameParams.MONSTERS_XML_DIR_PATH);
-            monstersDefinitions = new EntityAttributes[files.size() + 1];
+            monstersDefinitions = new MonsterAttributes[files.size() + 1];
             for(Document document : files)
                 decodeMonster(document, monstersDefinitions);
         } catch (ParserConfigurationException e) {
@@ -99,7 +101,7 @@ public class XMLManager {
         return monstersDefinitions;
     }
 
-    private static void decodeUser(Document document, EntityAttributes userDefinition){
+    private static void decodeUser(Document document, CharacterAttributes userDefinition){
         //int userId = Integer.parseInt(getNodeValueByTagName(document, "id"));
         userDefinition.setName(getNodeValueByTagName(document, "name"));
         userDefinition.setType(getNodeValueByTagName(document, "type"));
@@ -144,8 +146,8 @@ public class XMLManager {
         );
         userDefinition.setGraphics(getNodeValueByTagName(document, "graphics"));
     }
-    public static EntityAttributes loadUser(){
-        EntityAttributes userDefinition = new EntityAttributes();
+    public static CharacterAttributes loadUser(){
+        CharacterAttributes userDefinition = new CharacterAttributes();
         try {
             Document document = openXMLFile(GameParams.USER_XML_FILE_PATH);
             decodeUser(document, userDefinition);

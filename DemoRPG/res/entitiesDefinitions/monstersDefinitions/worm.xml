@@ -8,7 +8,7 @@
     <health>30</health>
     <soulPoints>0</soulPoints>
     <lineOfSight>1</lineOfSight>
-    <speed>0.5</speed>
+    <speed>1.0</speed>
 
     <strength>1</strength>
     <agility>0</agility>

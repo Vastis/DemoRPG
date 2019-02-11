@@ -1,7 +1,7 @@
 package gameWorld;
 
-import gameEngine.GameHandler;
-import gameEngine.GameParams;
+import gameCore.GameHandler;
+import gameCore.GameParams;
 import gameEntities.Entity;
 import gameGraphics.TileGraphics;
 import gameInterfaces.GraphicsInterface;
