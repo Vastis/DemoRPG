@@ -28,7 +28,7 @@ public class EntitiesManager implements GraphicsInterface {
         entityAttributes.setName("John");
         entityAttributes.setType("NPC");
         entityAttributes.setSpeed(2.0);
-        this.entities[105][95] = new NPC(this.gameHandler, entityAttributes);
+        this.entities[95][105] = new NPC(this.gameHandler, entityAttributes);
     }
 
     public void moveEntity(int beginRow, int beginCol, int endRow, int endCol){

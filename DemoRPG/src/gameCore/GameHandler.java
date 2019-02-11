@@ -1,24 +1,29 @@
 package gameCore;
 
 import gameEntities.Character;
+import gameEntities.NPC;
 import gameEntitiesAttributes.EntityAttributes;
 import gameEntitiesAttributes.MonsterAttributes;
 import gameInterfaces.GraphicsInterface;
 import javafx.scene.canvas.Canvas;
 import user.User;
+import window.WindowController;
 
 public class GameHandler implements GraphicsInterface {
 
     private MonsterAttributes[] monstersDefinitions;
+    private WindowController controller;
     private Canvas canvas;
     private GameRenderer gameRenderer;
     private EntitiesManager entitiesManager;
     private WorldManager worldManager;
     private int rows, cols;
     private User user;
+    private NPC npcSpokenTo;
 
-    public GameHandler(Canvas canvas, MonsterAttributes[] monstersDefinitions){
-        this.canvas = canvas;
+    public GameHandler(WindowController controller, MonsterAttributes[] monstersDefinitions){
+        this.controller = controller;
+        this.canvas = controller.getCanvas();
         this.monstersDefinitions = monstersDefinitions;
         for(int i = 1; i < monstersDefinitions.length; i++)
             monstersDefinitions[i].setGameHandler(this);
@@ -33,6 +38,24 @@ public class GameHandler implements GraphicsInterface {
 
     public void initialize(User user) {
         this.user = user;
+    }
+
+
+    @Override
+    public void update() {
+        this.gameRenderer.update();
+        this.entitiesManager.update();
+        this.user.update();
+        this.worldManager.update();
+    }
+
+    @Override
+    public void draw() {
+        this.canvas.getGraphicsContext2D().clearRect(0,0, this.canvas.getWidth(), this.canvas.getHeight());
+        this.worldManager.draw();
+        this.user.draw();
+        this.entitiesManager.draw();
+
     }
 
     public Canvas getCanvas() {
@@ -65,21 +88,13 @@ public class GameHandler implements GraphicsInterface {
     public MonsterAttributes[] getMonstersDefinitions() {
         return monstersDefinitions;
     }
-
-    @Override
-    public void update() {
-        this.gameRenderer.update();
-        this.entitiesManager.update();
-        this.user.update();
-        this.worldManager.update();
+    public WindowController getController() {
+        return controller;
     }
-
-    @Override
-    public void draw() {
-        this.canvas.getGraphicsContext2D().clearRect(0,0, this.canvas.getWidth(), this.canvas.getHeight());
-        this.worldManager.draw();
-        this.user.draw();
-        this.entitiesManager.draw();
-
+    public NPC getNpcSpokenTo() {
+        return npcSpokenTo;
+    }
+    public void setNpcSpokenTo(NPC npcSpokenTo) {
+        this.npcSpokenTo = npcSpokenTo;
     }
 }

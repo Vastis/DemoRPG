@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="dialogTextArea" text="Hello there!" disable="true" wrapText="true"
+                AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Button   fx:id="talkButton" text="Hi, how are you?" onAction="#onTalkButtonClicked"
+                mnemonicParsing="false" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <Button   fx:id="tradeButton" text="Hello, I'd like to buy some stuff." onAction="#onTradeButtonClicked"
+                mnemonicParsing="false" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <Button   fx:id="questButton" text="Pardon, I have to go now!" onAction="#onLeaveButtonClicked"
+                mnemonicParsing="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+   </children>
+</AnchorPane>

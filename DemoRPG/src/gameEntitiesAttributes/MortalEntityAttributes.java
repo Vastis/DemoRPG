@@ -36,8 +36,6 @@ public abstract class MortalEntityAttributes extends EntityAttributes {
                 ((MortalEntityAttributes)attacker.getAttributes()).getLuck(), this.magicDefence);
     }
     private void damageDealt(HostileEntity attacker, double attackerBaseDamage, double attackerLuck, double defence){
-        System.out.println(this.generator);
-        System.out.println(this.gameHandler);
         double luckThisTime = this.generator.nextDouble(this.luck);
         int damageTaken = this.generator.normalInt(
                 (attackerBaseDamage - defence) * attackerLuck * (1 - luckThisTime),
