@@ -19,10 +19,6 @@ public abstract class EntityAttributes {
     protected EntityAttributes(){
         this.generator = new PseudoRandomGenerator();
     }
-    protected EntityAttributes(GameHandler gameHandler){
-        this();
-        setGameHandler(gameHandler);
-    }
 
     public void setGameHandler(GameHandler gameHandler){
         this.gameHandler = gameHandler;

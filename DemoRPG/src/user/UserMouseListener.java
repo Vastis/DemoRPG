@@ -2,8 +2,9 @@ package user;
 
 import gameCore.GameHandler;
 import gameCore.GameParams;
+import gameEntities.*;
 import gameEntities.Character;
-import gameEntities.Entity;
+import gameEntitiesMovement.NPCMovement;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
@@ -47,8 +48,10 @@ public class UserMouseListener {
                 this.character.getMovement().setEntitySelected(newSelectedEntity);
             } else
                 System.out.println("You clicked at a dead body...");
+
         }
     }
+
     public void onMouseClicked(MouseEvent e) {
         if(e.getButton() == MouseButton.PRIMARY)
             enqueueMovement(e);
