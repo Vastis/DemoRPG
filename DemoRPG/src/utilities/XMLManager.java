@@ -105,6 +105,9 @@ public class XMLManager {
         //int userId = Integer.parseInt(getNodeValueByTagName(document, "id"));
         userDefinition.setName(getNodeValueByTagName(document, "name"));
         userDefinition.setType(getNodeValueByTagName(document, "type"));
+        userDefinition.setLevel(
+                Integer.parseInt(getNodeValueByTagName(document, "level"))
+        );
         userDefinition.setTotalExperience(
                 Integer.parseInt(getNodeValueByTagName(document, "totalExperience"))
         );

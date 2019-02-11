@@ -49,6 +49,7 @@ public abstract class MortalEntityAttributes extends EntityAttributes {
         if(this.health <= 0) {
             this.health = 0;
             attacker.getAttributes().addExperience(this.experienceFromKilling);
+            attacker.getMovement().setEntitySelected(null);
             System.out.println("Got " + this.experienceFromKilling + " exp from killing.");
         }
     }
