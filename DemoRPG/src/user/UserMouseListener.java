@@ -2,10 +2,9 @@ package user;
 
 import gameCore.GameHandler;
 import gameCore.GameParams;
+import gameEntities.*;
 import gameEntities.Character;
-import gameEntities.Entity;
-import gameEntities.Monster;
-import gameEntities.NPC;
+import gameEntitiesMovement.NPCMovement;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
@@ -38,7 +37,7 @@ public class UserMouseListener {
 
         if(this.gameHandler.getWorldManager().getTileAt(tileX, tileY).isOccupied()){
             Entity newSelectedEntity = this.gameHandler.getWorldManager().getTileAt(tileX, tileY).getEntityOccupying();
-            if(newSelectedEntity instanceof Monster)
+            if(newSelectedEntity instanceof MortalEntity)
                 selectToAttack(newSelectedEntity);
             else if(newSelectedEntity instanceof NPC)
                 selectToTalk(newSelectedEntity);
@@ -47,7 +46,7 @@ public class UserMouseListener {
     }
 
     private void selectToTalk(Entity newSelectedEntity) {
-        System.out.println("Talking");
+        ((NPCMovement)newSelectedEntity.getMovement()).openDialog();
     }
 
     private void selectToAttack(Entity newSelectedEntity){

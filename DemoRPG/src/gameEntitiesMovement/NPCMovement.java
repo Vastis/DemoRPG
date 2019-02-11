@@ -17,4 +17,8 @@ public class NPCMovement extends EntityMovement {
                 10,
                 10);
     }
+
+    public void openDialog(){
+
+    }
 }
