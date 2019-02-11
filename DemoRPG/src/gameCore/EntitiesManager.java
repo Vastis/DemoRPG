@@ -1,7 +1,10 @@
 package gameCore;
 
 import gameEntities.Entity;
+import gameEntities.NPC;
+import gameEntitiesAttributes.NPCAttributes;
 import gameInterfaces.GraphicsInterface;
+import javafx.scene.paint.Color;
 
 public class EntitiesManager implements GraphicsInterface {
 
@@ -13,6 +16,19 @@ public class EntitiesManager implements GraphicsInterface {
         this.gameHandler = gameHandler;
         this.monstersGenerator = new MonstersGenerator(gameHandler);
         this.entities = this.monstersGenerator.generate();
+        generateNpc();
+    }
+
+    private void generateNpc() {
+        NPCAttributes entityAttributes = new NPCAttributes();
+        entityAttributes.setGraphics(Color.YELLOW);
+        entityAttributes.setInitTileX(95);
+        entityAttributes.setInitTileY(105);
+        entityAttributes.setGameHandler(this.gameHandler);
+        entityAttributes.setName("John");
+        entityAttributes.setType("NPC");
+        entityAttributes.setSpeed(2.0);
+        this.entities[105][95] = new NPC(this.gameHandler, entityAttributes);
     }
 
     public void moveEntity(int beginRow, int beginCol, int endRow, int endCol){

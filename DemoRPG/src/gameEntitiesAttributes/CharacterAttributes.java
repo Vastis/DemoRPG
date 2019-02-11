@@ -1,7 +1,5 @@
 package gameEntitiesAttributes;
 
-import gameCore.GameHandler;
-
 public class CharacterAttributes extends HostileEntityAttributes {
 
     protected static final int expStep = 10;
@@ -23,10 +21,6 @@ public class CharacterAttributes extends HostileEntityAttributes {
     public CharacterAttributes(){
         super();
         this.expForNextLvl = this.level * this.level * expStep;
-    }
-    public CharacterAttributes(GameHandler gameHandler){
-        this();
-        setGameHandler(gameHandler);
     }
 
     public CharacterAttributes clone(){

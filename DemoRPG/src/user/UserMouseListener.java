@@ -4,6 +4,8 @@ import gameCore.GameHandler;
 import gameCore.GameParams;
 import gameEntities.Character;
 import gameEntities.Entity;
+import gameEntities.Monster;
+import gameEntities.NPC;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 
@@ -36,18 +38,30 @@ public class UserMouseListener {
 
         if(this.gameHandler.getWorldManager().getTileAt(tileX, tileY).isOccupied()){
             Entity newSelectedEntity = this.gameHandler.getWorldManager().getTileAt(tileX, tileY).getEntityOccupying();
-            if(!newSelectedEntity.getMovement().isDead()) {
-                if (this.character.getMovement().getEntitySelected() != null) {
-                    if (this.character.getMovement().getEntitySelected().equals(newSelectedEntity)) {
-                        this.character.getMovement().getEntitySelected().getMovement().setSelected(false);
-                        this.character.getMovement().setEntitySelected(null);
-                        return;
-                    }
-                }
-                this.character.getMovement().setEntitySelected(newSelectedEntity);
-            } else
-                System.out.println("You clicked at a dead body...");
+            if(newSelectedEntity instanceof Monster)
+                selectToAttack(newSelectedEntity);
+            else if(newSelectedEntity instanceof NPC)
+                selectToTalk(newSelectedEntity);
+
         }
+    }
+
+    private void selectToTalk(Entity newSelectedEntity) {
+        System.out.println("Talking");
+    }
+
+    private void selectToAttack(Entity newSelectedEntity){
+        if(!newSelectedEntity.getMovement().isDead()) {
+            if (this.character.getMovement().getEntitySelected() != null) {
+                if (this.character.getMovement().getEntitySelected().equals(newSelectedEntity)) {
+                    this.character.getMovement().getEntitySelected().getMovement().setSelected(false);
+                    this.character.getMovement().setEntitySelected(null);
+                    return;
+                }
+            }
+            this.character.getMovement().setEntitySelected(newSelectedEntity);
+        } else
+            System.out.println("You clicked at a dead body...");
     }
     public void onMouseClicked(MouseEvent e) {
         if(e.getButton() == MouseButton.PRIMARY)

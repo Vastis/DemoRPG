@@ -22,10 +22,6 @@ public abstract class MortalEntityAttributes extends EntityAttributes {
     protected MortalEntityAttributes(){
         super();
     }
-    protected MortalEntityAttributes(GameHandler gameHandler){
-        this();
-        setGameHandler(gameHandler);
-    }
 
     public void physicalDamageDealt(gameEntities.HostileEntity attacker){
         damageDealt(attacker, ((MortalEntityAttributes)attacker.getAttributes()).getStrength(),
