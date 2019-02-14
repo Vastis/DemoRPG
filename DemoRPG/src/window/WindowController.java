@@ -1,5 +1,9 @@
 package window;
 
+import equipment.Equipment;
+import equipment.EquipmentDisplay;
+import equipment.Item;
+import equipment.ItemAttributes;
 import gameCore.Game;
 import gameCore.GameHandler;
 import gameCore.GameParams;
@@ -8,6 +12,7 @@ import gameEntitiesAttributes.MonsterAttributes;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -50,13 +55,41 @@ public class WindowController {
                 this.dialogWindow = new NPCDialogWindow(this.gameHandler);
                 this.dialogWindow.show();
                 this.dialogShown = true;
-            }
+                this.gameHandler.setConversationState(0);
+            } else
+                checkConversationState();
         } else {
             dialogShown = false;
             if(this.dialogWindow != null) {
                 this.dialogWindow.close();
                 this.dialogWindow = null;
             }
+        }
+    }
+
+    private void checkConversationState() {
+        switch(this.gameHandler.getConversationState()){
+            case 0:
+                //idle
+                break;
+            case 1:
+                //not yet
+                break;
+            case 2:
+                Equipment equipment = new Equipment(
+                        new ItemAttributes(16)
+                );
+                equipment.add(new Item(new ItemAttributes()));
+                equipment.add(new Item(new ItemAttributes()));
+                equipment.add(new Item(new ItemAttributes()));
+                equipment.add(new Item(new ItemAttributes()));
+
+                EquipmentDisplay equipmentDisplay = new EquipmentDisplay(equipment);
+                Scene scene = new Scene(equipmentDisplay);
+                this.dialogWindow.setScene(scene);
+                break;
+            default:
+                System.out.println("Weird, shouldn't have gotten here...");
         }
     }
 

@@ -20,6 +20,7 @@ public class GameHandler implements GraphicsInterface {
     private int rows, cols;
     private User user;
     private NPC npcSpokenTo;
+    private int conversationState;
 
     public GameHandler(WindowController controller, MonsterAttributes[] monstersDefinitions){
         this.controller = controller;
@@ -96,5 +97,13 @@ public class GameHandler implements GraphicsInterface {
     }
     public void setNpcSpokenTo(NPC npcSpokenTo) {
         this.npcSpokenTo = npcSpokenTo;
+    }
+    public int getConversationState() {
+        if(this.npcSpokenTo == null)
+            return 3;
+        return this.conversationState;
+    }
+    public void setConversationState(int conversationState) {
+        this.conversationState = conversationState;
     }
 }

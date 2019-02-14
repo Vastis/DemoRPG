@@ -11,7 +11,6 @@ import java.io.IOException;
 
 public class NPCDialogWindow extends Stage {
 
-
     public NPCDialogWindow(GameHandler gameHandler){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("npcDialogWindow.fxml"));
