@@ -3,7 +3,6 @@ package gameWorld;
 import gameCore.GameHandler;
 import gameCore.GameParams;
 import gameEntities.Entity;
-import gameGraphics.TileGraphics;
 import gameInterfaces.GraphicsInterface;
 
 public class Tile implements GraphicsInterface {

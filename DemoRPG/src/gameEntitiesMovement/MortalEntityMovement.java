@@ -2,7 +2,6 @@ package gameEntitiesMovement;
 
 import gameCore.GameHandler;
 import gameEntities.MortalEntity;
-import gameEntitiesAttributes.EntityAttributes;
 import gameEntitiesAttributes.MortalEntityAttributes;
 
 public abstract class MortalEntityMovement extends EntityMovement {

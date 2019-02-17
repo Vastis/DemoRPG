@@ -2,7 +2,6 @@ package gameEntitiesMovement;
 
 import gameCore.GameHandler;
 import gameCore.GameParams;
-import gameEntities.HostileEntity;
 import gameEntities.Monster;
 import gameEntitiesAttributes.HostileEntityAttributes;
 import gameEntitiesAttributes.MonsterAttributes;

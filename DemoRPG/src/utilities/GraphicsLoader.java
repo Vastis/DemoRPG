@@ -1,4 +1,4 @@
-package gameGraphics;
+package utilities;
 /**
  * Unused for now...
  */

@@ -3,8 +3,6 @@ package gameEntitiesMovement;
 import gameCore.GameHandler;
 import gameCore.GameParams;
 import gameEntities.HostileEntity;
-import gameEntitiesAttributes.EntityAttributes;
-import gameEntitiesAttributes.HostileEntityAttributes;
 
 public abstract class HostileEntityMovement extends MortalEntityMovement {
 

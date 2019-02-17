@@ -9,23 +9,27 @@ import gameCore.GameHandler;
 import gameCore.GameParams;
 import gameEntitiesAttributes.CharacterAttributes;
 import gameEntitiesAttributes.MonsterAttributes;
+import internalWindow.InternalWindow;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import npcControls.NPCDialogWindow;
+import npcControls.NPCDialogPane;
 import user.User;
 import utilities.XMLManager;
 
 public class WindowController {
 
     private GameHandler gameHandler;
-    private Stage dialogWindow;
+    private InternalWindow dialogWindow;
     private boolean dialogShown;
+
+    @FXML
+    private AnchorPane rootPane;
     @FXML
     private Canvas mainCanvas;
 
@@ -52,8 +56,10 @@ public class WindowController {
         //gonna change that later...
         if (this.gameHandler.getNpcSpokenTo() != null) {
             if(!this.dialogShown) {
-                this.dialogWindow = new NPCDialogWindow(this.gameHandler);
-                this.dialogWindow.show();
+                this.dialogWindow = new InternalWindow(this.gameHandler,
+                        this.gameHandler.getNpcSpokenTo().getMovement().getPosX(),
+                        this.gameHandler.getNpcSpokenTo().getMovement().getPosY());
+                this.rootPane.getChildren().add(this.dialogWindow);
                 this.dialogShown = true;
                 this.gameHandler.setConversationState(0);
             } else
@@ -61,7 +67,7 @@ public class WindowController {
         } else {
             dialogShown = false;
             if(this.dialogWindow != null) {
-                this.dialogWindow.close();
+                this.rootPane.getChildren().remove(this.dialogWindow);
                 this.dialogWindow = null;
             }
         }
@@ -85,8 +91,8 @@ public class WindowController {
                 equipment.add(new Item(new ItemAttributes()));
 
                 EquipmentDisplay equipmentDisplay = new EquipmentDisplay(equipment);
-                Scene scene = new Scene(equipmentDisplay);
-                this.dialogWindow.setScene(scene);
+                this.dialogWindow.getController().setContent(equipmentDisplay);
+                this.gameHandler.setConversationState(0);
                 break;
             default:
                 System.out.println("Weird, shouldn't have gotten here...");

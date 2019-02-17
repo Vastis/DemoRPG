@@ -2,7 +2,6 @@ package gameCore;
 
 import gameEntities.Character;
 import gameEntities.NPC;
-import gameEntitiesAttributes.EntityAttributes;
 import gameEntitiesAttributes.MonsterAttributes;
 import gameInterfaces.GraphicsInterface;
 import javafx.scene.canvas.Canvas;

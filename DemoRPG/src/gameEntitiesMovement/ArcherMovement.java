@@ -1,21 +1,17 @@
-package vocationsMovement;
+package gameEntitiesMovement;
 
 import gameCore.GameHandler;
 import gameCore.GameParams;
-import gameEntities.Character;
-import gameEntitiesAttributes.CharacterAttributes;
-import gameEntitiesAttributes.EntityAttributes;
 import gameEntities.HostileEntity;
 import gameEntitiesAttributes.HostileEntityAttributes;
-import gameEntitiesMovement.CharacterMovement;
 import javafx.scene.paint.Color;
-import vocations.Sorcerer;
+import gameEntities.Archer;
 
-public class SorcererMovement extends CharacterMovement {
+public class ArcherMovement extends CharacterMovement {
 
     private double beginX, beginY, endX, endY;
 
-    public SorcererMovement(GameHandler gameHandler, Sorcerer owner) {
+    public ArcherMovement(GameHandler gameHandler, Archer owner) {
         super(gameHandler, owner);
     }
 
@@ -29,7 +25,7 @@ public class SorcererMovement extends CharacterMovement {
             this.beginY = this.tileY;
             this.endX = this.entitySelected.getMovement().getTileX();
             this.endY = this.entitySelected.getMovement().getTileY();
-            ((HostileEntityAttributes)this.entitySelected.getAttributes()).magicDamageDealt((Sorcerer)this.owner);
+            ((HostileEntityAttributes)this.entitySelected.getAttributes()).distanceDamageDealt((Archer)this.owner);
             return true;
         }
         return false;
@@ -43,10 +39,13 @@ public class SorcererMovement extends CharacterMovement {
         double missileModuleY = moduleY / ticksPerAttackDraw;
 
 
-        double missileBeginX = this.beginX + (1 + currentDrawTicks) * missileModuleX;
-        double missileBeginY = this.beginY + (1 + currentDrawTicks) * missileModuleY;
+        double missileBeginX = this.beginX + currentDrawTicks * missileModuleX;
+        double missileBeginY = this.beginY + currentDrawTicks * missileModuleY;
+        double missileEndX = this.beginX + (1 + currentDrawTicks) * missileModuleX;
+        double missileEndY = this.beginY + (1 + currentDrawTicks) * missileModuleY;
 
-        this.gameHandler.getGameRenderer().fillOvalRelativeToPlayer(Color.BLUE,
-                missileBeginX * GameParams.TILE_SIZE + GameParams.TILE_SIZE/2 - 3, missileBeginY * GameParams.TILE_SIZE + GameParams.TILE_SIZE/2 - 3, 6, 6);
+        this.gameHandler.getGameRenderer().strokeLineRelativeToPlayer(Color.BROWN,
+                missileBeginX * GameParams.TILE_SIZE + GameParams.TILE_SIZE/2, missileBeginY * GameParams.TILE_SIZE + GameParams.TILE_SIZE/2,
+                missileEndX * GameParams.TILE_SIZE + GameParams.TILE_SIZE/2, missileEndY * GameParams.TILE_SIZE + GameParams.TILE_SIZE/2);
     }
 }

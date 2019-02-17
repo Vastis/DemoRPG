@@ -1,7 +1,7 @@
 <root>
     <id>0</id>
     <name>Vastis</name>
-    <type>vocations.Sorcerer</type>
+    <type>gameEntities.Sorcerer</type>
     <level>1</level>
     <totalExperience>0</totalExperience>
 

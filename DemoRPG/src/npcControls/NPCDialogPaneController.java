@@ -4,13 +4,13 @@ import gameCore.GameHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 
-public class NPCDialogWindowController {
+public class NPCDialogPaneController {
 
     private GameHandler gameHandler;
     @FXML
     private TextArea dialogTextArea;
 
-    public NPCDialogWindowController(GameHandler gameHandler){
+    public NPCDialogPaneController(GameHandler gameHandler){
         this.gameHandler = gameHandler;
     }
 
@@ -29,6 +29,5 @@ public class NPCDialogWindowController {
         this.gameHandler.setConversationState(0);
         this.gameHandler.getUserCharacter().getMovement().setEntitySelected(null);
         this.gameHandler.setNpcSpokenTo(null);
-        ((NPCDialogWindow)dialogTextArea.getParent().getScene().getWindow()).close();
     }
 }

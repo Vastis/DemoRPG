@@ -4,7 +4,7 @@
         <name>User's name.</name>
         <type>"Project path" to vocation the User's chosen
             (in User class new instance is created from path set here -
-            e.g. for Sorcerer it's "vocations.Sorcerer").</type>
+            e.g. for Sorcerer it's "gameEntities.Sorcerer").</type>
         <level>User's level.</level>
         <totalExperience>User's experience.</totalExperience>
 

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="200.0" prefWidth="200.0"
+<fx:root type="AnchorPane" prefHeight="200.0" prefWidth="200.0"
             xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextArea fx:id="dialogTextArea" text="Hello there!" disable="true" wrapText="true"
@@ -15,4 +15,4 @@
       <Button   fx:id="questButton" text="Pardon, I have to go now!" onAction="#onLeaveButtonClicked"
                 mnemonicParsing="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
    </children>
-</AnchorPane>
+</fx:root>

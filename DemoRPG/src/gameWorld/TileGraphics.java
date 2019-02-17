@@ -1,4 +1,4 @@
-package gameGraphics;
+package gameWorld;
 
 import javafx.scene.paint.Color;
 

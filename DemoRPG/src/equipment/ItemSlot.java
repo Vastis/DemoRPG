@@ -3,7 +3,6 @@ package equipment;
 import gameCore.GameParams;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;

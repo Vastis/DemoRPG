@@ -1,9 +1,8 @@
-package vocations;
+package gameEntities;
 
 import gameCore.GameHandler;
-import gameEntities.Character;
 import gameEntitiesAttributes.CharacterAttributes;
-import vocationsMovement.WarriorMovement;
+import gameEntitiesMovement.WarriorMovement;
 
 public class Warrior extends Character {
     public Warrior(GameHandler gameHandler, CharacterAttributes entityAttributes) {

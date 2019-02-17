@@ -1,0 +1,45 @@
+* {
+    -fx-primary-color: greenyellow;
+    -fx-darker-color: green;
+    -fx-darkest-color: darkgreen;
+}
+
+.main-pane {
+    -fx-background-color: -fx-primary-color;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.menu-bar-pane {
+    -fx-pref-height: 30;
+    -fx-background-color: -fx-darker-color;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.menu-bar-button {
+    -fx-pref-width: 25;
+    -fx-border-color: -fx-primary-color;
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: -fx-darker-color;
+    -fx-font-size: 10;
+    -fx-text-alignment: center;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.menu-bar-button:hover {
+    -fx-background-color: -fx-darker-color;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.menu-bar-button:pressed {
+    -fx-background-color: -fx-darkest-color;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.content-pane {
+    -fx-background-color: -fx-darkest-color;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

@@ -1,12 +1,10 @@
-package vocationsMovement;
+package gameEntitiesMovement;
 
 import gameCore.GameHandler;
-import gameEntitiesAttributes.CharacterAttributes;
 import gameEntities.HostileEntity;
 import gameEntitiesAttributes.HostileEntityAttributes;
-import gameEntitiesMovement.CharacterMovement;
 import javafx.scene.paint.Color;
-import vocations.Warrior;
+import gameEntities.Warrior;
 
 public class WarriorMovement extends CharacterMovement {
 

@@ -4,7 +4,6 @@ import gameCore.GameHandler;
 import gameCore.GameParams;
 import gameEntities.*;
 import gameEntities.Character;
-import gameEntitiesMovement.NPCMovement;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 

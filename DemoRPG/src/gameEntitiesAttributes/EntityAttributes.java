@@ -1,8 +1,6 @@
 package gameEntitiesAttributes;
 
 import gameCore.GameHandler;
-import gameEntities.HostileEntity;
-import gameEntities.MortalEntity;
 import javafx.scene.paint.Color;
 import utilities.PseudoRandomGenerator;
 

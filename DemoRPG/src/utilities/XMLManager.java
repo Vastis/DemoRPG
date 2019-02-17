@@ -2,7 +2,6 @@ package utilities;
 
 import gameCore.GameParams;
 import gameEntitiesAttributes.CharacterAttributes;
-import gameEntitiesAttributes.EntityAttributes;
 import gameEntitiesAttributes.MonsterAttributes;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;

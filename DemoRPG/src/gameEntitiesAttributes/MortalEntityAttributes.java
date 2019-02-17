@@ -1,6 +1,5 @@
 package gameEntitiesAttributes;
 
-import gameCore.GameHandler;
 import gameEntities.HostileEntity;
 
 public abstract class MortalEntityAttributes extends EntityAttributes {
